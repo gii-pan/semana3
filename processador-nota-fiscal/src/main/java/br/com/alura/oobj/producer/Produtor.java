@@ -16,8 +16,11 @@ public class Produtor {
         Destination fila = (Destination) context.lookup("financeiro");
         MessageProducer producer = session.createProducer(fila);
 
-        Message message = session.createTextMessage(mensagem);
-        producer.send(message);
+        for(int I=0; I<1000; I++){
+            Message message = session.createTextMessage(mensagem + I);
+            producer.send(message);
+        }
+
 
         session.close();
         connection.close();

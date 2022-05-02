@@ -1,10 +1,10 @@
-package br.com.alura.oobj.producer;
+package br.com.alura.oobj.cli;
 
 import javax.jms.*;
 import javax.naming.InitialContext;
 import java.util.Scanner;
 
-public class TesteConsumidor {
+public class Consumidor {
 
     public static void main(String[] args) throws Exception {
         InitialContext context = new InitialContext();
